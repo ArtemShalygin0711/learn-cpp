@@ -24,12 +24,17 @@ int Elevator::WhichFloor(int ElementaryFloor, int EndedFloor) {
 			cout << ElementaryFloor + 1 << " этаж" << "\n";
 			ElementaryFloor += 1;
 		}
+		cout << "Вы приехали!" << "\n";
 	}
-	if (ElementaryFloor > EndedFloor) {
+	else if (ElementaryFloor > EndedFloor) {
 		while (ElementaryFloor != EndedFloor) {
 			cout << ElementaryFloor - 1 << " этаж" << "\n";
 			ElementaryFloor -= 1;
 		}
+		cout << "Вы приехали!" << "\n";
+	}
+	else if (ElementaryFloor == EndedFloor) {
+		cout << "Вы и так на " << ElementaryFloor << " этаже." << "\n" << "Вам некуда ехать." << "\n";
 	}
 	return 0;
 }
@@ -41,9 +46,17 @@ int main() {
 	int LFloor, HFloor;
 	while (true) {
 		cout << "На каком вы этаже?" << "\n";
-		cin >> LFloor;
+		while (!(cin >> LFloor)) {
+			cout << "Неправильный ввод, введите верно: ";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
 		cout << "На какой этаж вам нужно?" << "\n";
-		cin >> HFloor;
+		while (!(cin >> HFloor)) {
+			cout << "Неправильный ввод, введите верно: ";
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
 		
 		Elevator elevator = Elevator(HFloor, LFloor);
 		elevator.WhichFloor(LFloor, HFloor);
