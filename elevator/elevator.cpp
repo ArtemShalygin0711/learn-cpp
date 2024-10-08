@@ -8,8 +8,7 @@ class Elevator {
 	int LowerFloor;
 
 public:
-	string GetString();
-	void Print();
+	int WhichFloor(int ElementaryFloor, int EndedFloor);
 	void SetHigherFloor(int floor) { HigherFloor = floor; }
 	string SetHigherFloor() { return "HigherFloor"; }
 	void SetLowerFloor(int floor) { LowerFloor = floor; }
@@ -19,15 +18,35 @@ public:
 	~Elevator() {};
 };
 
-string Elevator::GetString() {
-	return " | HigherFloor: " + to_string(HigherFloor) + "\n" + " | LowerFloor: " + to_string(LowerFloor) + "\n";
+int Elevator::WhichFloor(int ElementaryFloor, int EndedFloor) {
+	if (ElementaryFloor < EndedFloor) {
+		while (ElementaryFloor != EndedFloor) {
+			cout << ElementaryFloor + 1 << " этаж" << "\n";
+			ElementaryFloor += 1;
+		}
+	}
+	if (ElementaryFloor > EndedFloor) {
+		while (ElementaryFloor != EndedFloor) {
+			cout << ElementaryFloor - 1 << " этаж" << "\n";
+			ElementaryFloor -= 1;
+		}
+	}
+	return 0;
 }
 
-void Elevator::Print() {
-	cout << GetString();
-}
 
 int main() {
-	Elevator elevator = Elevator(10, 1);
-	elevator.Print();
+
+	setlocale(LC_ALL, "");
+	int LFloor, HFloor;
+	while (true) {
+		cout << "На каком вы этаже?" << "\n";
+		cin >> LFloor;
+		cout << "На какой этаж вам нужно?" << "\n";
+		cin >> HFloor;
+		
+		Elevator elevator = Elevator(HFloor, LFloor);
+		elevator.WhichFloor(LFloor, HFloor);
+	}
+	
 }
