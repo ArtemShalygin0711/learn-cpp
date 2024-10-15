@@ -7,14 +7,14 @@ void Print(double value) {
     cout << value;
 }
 
-string Print(string value) {
+void Print(string value) {
     cout << value;
 }
 
-int Print(int value) {
+void Print(int value) {
     cout << value;
 }
 
-char Print(char value) {
+void Print(char value) {
     cout << value;
 }
