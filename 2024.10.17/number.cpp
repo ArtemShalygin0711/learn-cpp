@@ -23,9 +23,8 @@ void Print(Number n) {
 }
 
 //функция main
-int main() {
-	
-	Number numb = Number(15);
-
-	Print(numb);
+int main()
+{
+	int intValue = 10;
+	Print(intValue);
 }
