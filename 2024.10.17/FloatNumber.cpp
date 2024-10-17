@@ -9,7 +9,7 @@ public:
 	float Numb() { return mValue; }
 	void Print();
 	FloatNumber() {};
-	FloatNumber(float value) :mValue(value) {};
+	explicit FloatNumber(float value) :mValue(value) {};
 	~FloatNumber() {};
 };
 
