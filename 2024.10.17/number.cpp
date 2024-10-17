@@ -10,7 +10,7 @@ public:
 	void Numb(int Value) { mValue = Value; }
 	int Numb() { return mValue; }
 	void Print();
-	Number() {};
+	Number(int value):mValue(value) {};
 	~Number() {};
 };
 //метод класса Number
@@ -23,9 +23,9 @@ void Print(Number n) {
 }
 
 //функция main
-//функция маин
 int main() {
 	
-	Number numb = Number();
+	Number numb = Number(15);
+
 	Print(numb);
 }
