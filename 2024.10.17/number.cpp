@@ -14,9 +14,7 @@ public:
 };
 
 int Number::Print() {
-	Number numb = Number();
-	numb.Numb(10);
-	return numb.Numb();
+	return mValue;
 }
 
 int main() {
