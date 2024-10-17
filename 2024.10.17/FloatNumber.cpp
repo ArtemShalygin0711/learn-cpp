@@ -23,8 +23,8 @@ void Print(FloatNumber n) {
 
 int main()
 {
-	
+	FloatNumber numb = FloatNumber();
 	float Value = 2.5;
-	
-	Print(Value);
+	numb.Numb(Value);
+	Print(numb);
 }
