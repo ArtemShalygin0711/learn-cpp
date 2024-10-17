@@ -8,18 +8,18 @@ class Number {
 public:
 	void Numb(int Value) { mValue = Value; }
 	int Numb() { return mValue; }
-	int Print(int vAlue);
+	int Print();
 	Number() {};
 	~Number() {};
 };
 
-int Number::Print(int vAlue) {
+int Number::Print() {
 	Number numb = Number();
-	numb.Numb(vAlue);
+	numb.Numb(10);
 	return numb.Numb();
 }
 
 int main() {
 	Number numb = Number();
-	cout << numb.Print(10);
+	cout << numb.Print();
 }
