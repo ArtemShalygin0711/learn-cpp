@@ -4,7 +4,7 @@
 using namespace std;
 
 class Number {
-	int mValue;
+	int mValue = 0;
 public:
 	void Numb(int Value) { mValue = Value; }
 	int Numb() { return mValue; }
