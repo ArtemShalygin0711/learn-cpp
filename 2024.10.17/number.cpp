@@ -8,16 +8,16 @@ class Number {
 public:
 	void Numb(int Value) { mValue = Value; }
 	int Numb() { return mValue; }
-	int Print();
+	void Print();
 	Number() {};
 	~Number() {};
 };
 
-int Number::Print() {
-	return mValue;
+void Number::Print() {
+	cout << mValue;
 }
 
 int main() {
 	Number numb = Number();
-	cout << numb.Print();
+	numb.Print();
 }
