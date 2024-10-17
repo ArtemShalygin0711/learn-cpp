@@ -17,7 +17,11 @@ void Number::Print() {
 	cout << mValue;
 }
 
+void Print(Number n) {
+	n.Print();
+}
+
 int main() {
 	Number numb = Number();
-	numb.Print();
+	Print(numb);
 }
