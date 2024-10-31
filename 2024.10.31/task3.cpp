@@ -17,11 +17,9 @@ void Number::Print() {
 	cout << mValue;
 }
 
-void Print(Number n) {
-	n.Print();
-}
 
-int main(){
-	int intValue = 10;
-	Print(intValue);
+
+int main() {
+	Number n = Number(5);
+	n.Print();
 }
