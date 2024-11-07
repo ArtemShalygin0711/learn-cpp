@@ -38,7 +38,7 @@ public:
 	Cat() :Animal("Meow") {};
 };
 
-void Say(Animal n) {
+void Say(Animal& n) {
 	n.Say(n);
 }
 
@@ -59,6 +59,9 @@ int main() {
 	cout << "write cats name: ";
 	cin >> name;
 	cat.SetNameCat(name);
+
+	
+
 
 	cout << "\n" << raven.GetNameRaven() << " said: ";
 	Say(raven);
