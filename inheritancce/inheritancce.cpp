@@ -9,8 +9,9 @@ class Animal {
 	string word;
 	
 public:
+	Animal() {};
 	Animal(string w) :word(w) {};
-	void Say() { cout << word; }
+	void Say(Animal n) { cout << word; }
 };
 
 class Raven : public Animal {
@@ -37,11 +38,14 @@ public:
 	Cat() :Animal("Meow") {};
 };
 
-
+void Say(Animal n) {
+	n.Say(n);
+}
 
 
 int main() {
 	string name;
+	Animal n = Animal();
 	Raven raven = Raven();
 	Dog dog = Dog();
 	Cat cat = Cat();
@@ -57,9 +61,9 @@ int main() {
 	cat.SetNameCat(name);
 
 	cout << "\n" << raven.GetNameRaven() << " said: ";
-	raven.Say();
+	Say(raven);
 	cout << "\n" << dog.GetNameDog() << " said: ";
-	dog.Say();
+	Say(dog);
 	cout << "\n" << cat.GetNameCat() << " said: ";
-	cat.Say();
+	Say(cat);
 }
