@@ -67,9 +67,9 @@ int main() {
 
 
 	cout << "\n" << raven.GetNameRaven() << " said: ";
-	ravenPointer->Say();
+	Say(ravenPointer);
 	cout << "\n" << dog.GetNameDog() << " said: ";
-	dogPointer->Say();
+	Say(dogPointer);
 	cout << "\n" << cat.GetNameCat() << " said: ";
-	catPointer->Say();
+	Say(catPointer);
 }
