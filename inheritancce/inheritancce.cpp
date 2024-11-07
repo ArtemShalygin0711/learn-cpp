@@ -11,7 +11,7 @@ class Animal {
 public:
 	Animal() {};
 	Animal(string w) :word(w) {};
-	void Say(Animal n) { cout << word; }
+	void Say() { cout << word; }
 };
 
 class Raven : public Animal {
@@ -39,7 +39,7 @@ public:
 };
 
 void Say(Animal& n) {
-	n.Say(n);
+	n.Say();
 }
 
 
@@ -48,6 +48,7 @@ int main() {
 	Animal n = Animal();
 	Raven raven = Raven();
 	Dog dog = Dog();
+	Dog* dogPointer = new Dog();
 	Cat cat = Cat();
 
 	cout << "write ravens name: ";
@@ -66,7 +67,7 @@ int main() {
 	cout << "\n" << raven.GetNameRaven() << " said: ";
 	Say(raven);
 	cout << "\n" << dog.GetNameDog() << " said: ";
-	Say(dog);
+	Say(*dogPointer);
 	cout << "\n" << cat.GetNameCat() << " said: ";
 	Say(cat);
 }
