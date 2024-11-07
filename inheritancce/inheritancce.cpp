@@ -38,8 +38,8 @@ public:
 	Cat() :Animal("Meow") {};
 };
 
-void Say(Animal& n) {
-	n.Say();
+void Say(Animal* n) {
+	n->Say();
 }
 
 
@@ -47,9 +47,11 @@ int main() {
 	string name;
 	Animal n = Animal();
 	Raven raven = Raven();
+	Raven* ravenPointer = new Raven();
 	Dog dog = Dog();
 	Dog* dogPointer = new Dog();
 	Cat cat = Cat();
+	Cat* catPointer = new Cat();
 
 	cout << "write ravens name: ";
 	cin >> name;
@@ -65,9 +67,9 @@ int main() {
 
 
 	cout << "\n" << raven.GetNameRaven() << " said: ";
-	Say(raven);
+	ravenPointer->Say();
 	cout << "\n" << dog.GetNameDog() << " said: ";
 	dogPointer->Say();
 	cout << "\n" << cat.GetNameCat() << " said: ";
-	Say(cat);
+	catPointer->Say();
 }
