@@ -3,20 +3,24 @@
 
 using namespace std;
 
-class BanksScore {
-	int numberScore;
+class BanksAccount {
+	int numberAccount;
 	string titleBank;
-	string titleScore;
+	string titleAccount;
 	float balance;
 public:
-	void SetNumberScore(int numbScore) { numberScore = numbScore; }
-	int GetNumberScore() { return numberScore; }
+	void SetNumberAccount(int numbAccount) { numberAccount = numbAccount; }
+	int GetNumberAccount() { return numberAccount; }
 	void SetTitleBank(string secondTitleBank) { titleBank = secondTitleBank; }
 	string GetTitleBank() { return titleBank; }
-	void SetTitleScore(string secondTitleScore) { titleScore = secondTitleScore; }
-	string GetTitleScore() { return titleScore; }
-	void SetBalance(int balanced) { balance = balanced; }
+	void SetTitleAccount(string secondTitleAccount) { titleAccount = secondTitleAccount; }
+	string GetTitleAccount() { return titleAccount; }
+	void SetBalance(float balanced) { balance = balanced; }
 	float GetBalance() { return balance; }
-	BanksScore() {};
-	~BanksScore() {};
+	BanksAccount(int numbAccount = 0, string titlebank = " ", string titleaccount = " ", float Balance = 0.0): numberAccount(numbAccount), titleBank(titlebank), titleAccount(titleaccount), balance(Balance) {};
+	~BanksAccount() {};
 };
+
+int main() {
+
+}
